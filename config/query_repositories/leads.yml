@@ -1,0 +1,9 @@
+services:
+  partially_signed_up_leads_model:
+    class: App\Models\Query\EloquentPartiallySignedUpLeads
+
+  partially_signed_up_leads_repository:
+    class: App\Models\Query\EloquentPartiallySignedUpLeads
+
+  sales_closed_won_leads_model:
+    class: App\Models\Query\EloquentClosedWonLeads

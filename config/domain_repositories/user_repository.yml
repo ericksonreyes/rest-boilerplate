@@ -1,0 +1,4 @@
+services:
+  user_repository:
+    class: App\Repositories\Command\EventSourcedUserRepository
+    arguments: ['@event_store']

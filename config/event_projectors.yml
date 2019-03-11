@@ -1,0 +1,29 @@
+services:
+  event_subscriber:
+    class: App\Projectors\RabbitMQEventSubscriber
+    arguments: ['@rabbitmq_connection', '%rabbitmq_exchange_name', '@event_factory']
+
+  partially_signed_up_online_leads_projector:
+    class: App\Projectors\Lead\PartiallySignedUpLeadRecordProjector
+
+  partially_signed_up_online_leads_verification_email_sender:
+    class: App\Projectors\Lead\PartiallySignUpLeadVerificationEmailSender
+
+  closed_won_online_leads_projector:
+    class: App\Projectors\Lead\ClosedWonOnlineLeadsProjector
+
+  closed_won_online_leads_welcome_email_sender:
+    class: App\Projectors\Lead\ClosedWonOnlineLeadWelcomeEmailSender
+
+  projection_generators:
+    class: App\Projectors\Projectors
+    calls:
+      - [addProjector, ['@partially_signed_up_online_leads_projector']]
+      - [addProjector, ['@closed_won_online_leads_projector']]
+
+  email_notification_senders:
+    class: App\Projectors\Projectors
+    calls:
+      - [addProjector, ['@partially_signed_up_online_leads_verification_email_sender']]
+      - [addProjector, ['@closed_won_online_leads_welcome_email_sender']]
+

@@ -1,0 +1,1228 @@
+{
+	"info": {
+		"_postman_id": "fa9434a9-02e4-426c-9d5f-93e741623e16",
+		"name": "Weave",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Templates",
+			"item": [
+				{
+					"name": "Get Field Templates",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{knit.security.access-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/weave/api/templates/fields",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"weave",
+								"api",
+								"templates",
+								"fields"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Weave",
+			"item": [
+				{
+					"name": "Create Weave",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{knit.security.access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\" : \"I did it my weave\"\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weave",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-bb37f2fd-0b6a-4a57-acbb-21ad731c9ce2",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-bb37f2fd-0b6a-4a57-acbb-21ad731c9ce2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Weave",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"newName\" : \"Kame hame weaveeee!\"\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-933083d5-5533-4e8b-86b9-133145fe3893",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-933083d5-5533-4e8b-86b9-133145fe3893"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rename Weave",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"newName\" : \"Kame hame weaveeee!\"\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-bb37f2fd-0b6a-4a57-acbb-21ad731c9ce2",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-bb37f2fd-0b6a-4a57-acbb-21ad731c9ce2"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weaves",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"newName\" : \"Kame hame weaveeee!\"\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "My Weaves",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/my_weaves/",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"my_weaves",
+								""
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publish Weave",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"newName\" : \"Kame hame weaveeee!\"\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-bb37f2fd-0b6a-4a57-acbb-21ad731c9ce2/publish",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-bb37f2fd-0b6a-4a57-acbb-21ad731c9ce2",
+								"publish"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unpublish Weave",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"newName\" : \"Kame hame weaveeee!\"\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-bb37f2fd-0b6a-4a57-acbb-21ad731c9ce2/unpublish",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-bb37f2fd-0b6a-4a57-acbb-21ad731c9ce2",
+								"unpublish"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Field",
+			"item": [
+				{
+					"name": "Create Person Field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{knit.security.access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"personField12\",\n    \"name\": \"Person Field\",\n\t\"type\": \"person\",\n    \"attributes\": {\n        \"color\": \"#CCCCCC\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-933083d5-5533-4e8b-86b9-133145fe3893/fields",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-933083d5-5533-4e8b-86b9-133145fe3893",
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Number Field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"numberField1\",\n    \"name\": \"Number Field\",\n\t\"type\": \"number\",\n    \"attributes\": {\n        \"color\": \"#CCCCCC\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-933083d5-5533-4e8b-86b9-133145fe3893/fields",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-933083d5-5533-4e8b-86b9-133145fe3893",
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Large Text Field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"largeText1\",\n    \"name\": \"Large Text Field\",\n    \"type\": \"largeText\",\n    \"attributes\": {\n        \"color\": \"#CFCFCF\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-933083d5-5533-4e8b-86b9-133145fe3893/fields",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-933083d5-5533-4e8b-86b9-133145fe3893",
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Text Field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"textField1\",\n    \"name\": \"Text Field\",\n    \"type\": \"text\",\n    \"attributes\": {\n        \"color\": \"#CFCFCF\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-933083d5-5533-4e8b-86b9-133145fe3893/fields",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-933083d5-5533-4e8b-86b9-133145fe3893",
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Progress Field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"progressField1\",\n    \"name\": \"Progress Field\",\n    \"type\": \"progress\",\n    \"attributes\": {\n        \"color\": \"#CFCFCF\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-43dda952-808e-4551-8bc4-451c47c2fb2c/fields",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-43dda952-808e-4551-8bc4-451c47c2fb2c",
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Date Field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"dateField1\",\n    \"name\": \"Date Field\",\n    \"type\": \"date\",\n    \"attributes\": {\n        \"color\": \"#CFCFCF\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-e9fb9a79-c699-486d-b36a-1dcfa00b5efb/fields",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-e9fb9a79-c699-486d-b36a-1dcfa00b5efb",
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Time Field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"timeField1\",\n    \"name\": \"Time Field\",\n    \"type\": \"time\",\n    \"attributes\": {\n        \"color\": \"#CFCFCF\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-e9fb9a79-c699-486d-b36a-1dcfa00b5efb/fields",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-e9fb9a79-c699-486d-b36a-1dcfa00b5efb",
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Date Time Field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": \"dateTimeField1\",\n    \"name\": \"Date & Time Field\",\n    \"type\": \"dateTime\",\n    \"attributes\": {\n        \"color\": \"#CFCFCF\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-e9fb9a79-c699-486d-b36a-1dcfa00b5efb/fields",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-e9fb9a79-c699-486d-b36a-1dcfa00b5efb",
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Multi Select Field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Multi Select Field\",\n    \"type\": \"multiSelect\",\n    \"attributes\": {\n        \"color\": \"#DDDDDD\",\n        \"multiSelect\": true,\n        \"choices\": [\n        \t{\n        \t\t\"id\": \"Choice1\",\n            \t\"description\": \"Choice 1\",\n            \t\"attributes\": {\n                \t\"color\": \"#CCCCCC\",\n                \t\"rating\": 1\n            \t}\n        \t},\n        \t{\n        \t\t\"id\": \"Choice2\",\n            \t\"description\": \"Choice 2\",\n            \t\"attributes\": {\n                \t\"color\": \"#CDCDCD\",\n                \t\"rating\": 2\n            \t}\n        \t}\n        ]\n    }\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-e9fb9a79-c699-486d-b36a-1dcfa00b5efb/fields",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-e9fb9a79-c699-486d-b36a-1dcfa00b5efb",
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Ranged Field",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Ranged Field\",\n    \"type\": \"ranged\",\n    \"attributes\": {\n        \"color\": \"#FCFCFC\",\n        \"min\": 1,\n        \"max\": 10\n    }\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-bb37f2fd-0b6a-4a57-acbb-21ad731c9ce2/fields",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-bb37f2fd-0b6a-4a57-acbb-21ad731c9ce2",
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rearrange Person Field",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{knit.security.access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"newPosition\":0\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-bb37f2fd-0b6a-4a57-acbb-21ad731c9ce2/fields/weave-field-e15dc791-4c63-46b2-a788-ee7387b2c70d/rearrange",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-bb37f2fd-0b6a-4a57-acbb-21ad731c9ce2",
+								"fields",
+								"weave-field-e15dc791-4c63-46b2-a788-ee7387b2c70d",
+								"rearrange"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Person Field",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"newPosition\":2\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-933083d5-5533-4e8b-86b9-133145fe3893/fields/weave-field-4f76136e-6d36-472f-ad2d-35a6acd0f07b",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-933083d5-5533-4e8b-86b9-133145fe3893",
+								"fields",
+								"weave-field-4f76136e-6d36-472f-ad2d-35a6acd0f07b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Person Field",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Person Field\",\n\t\"type\": \"person\",\n    \"attributes\": {\n        \"color\": \"#DEDEDE\"\n    }\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-6a2c4c72-4ce1-4166-82b5-986faaf2d612/fields/weave-field-d372310d-d858-4ca6-94e5-5ca6a7609731",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-6a2c4c72-4ce1-4166-82b5-986faaf2d612",
+								"fields",
+								"weave-field-d372310d-d858-4ca6-94e5-5ca6a7609731"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Weave Fields",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{knit.security.access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-d248b14d-915d-4215-a4be-274c260e0094/fields",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-d248b14d-915d-4215-a4be-274c260e0094",
+								"fields"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Person Field",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-d248b14d-915d-4215-a4be-274c260e0094/fields/weave-field-c3559f44-a21a-4dc7-a407-781cec8a4012",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-d248b14d-915d-4215-a4be-274c260e0094",
+								"fields",
+								"weave-field-c3559f44-a21a-4dc7-a407-781cec8a4012"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Thread",
+			"item": [
+				{
+					"name": "Get Threads",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{knit.security.access-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-933083d5-5533-4e8b-86b9-133145fe3893/threads",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-933083d5-5533-4e8b-86b9-133145fe3893",
+								"threads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Thread",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{knit.security.access-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"weave-field-1b42c91b-3f74-458a-9680-2d1c0652d495\" : \"Another Field Value 1\",\n\t\"weave-field-3f1000a5-0dff-4793-b2d0-2aecf6373076\" : \"Another Field Value 2\",\n\t\"weave-field-05f433fc-06b8-4093-85e5-bfc8da4ae362\" : \"Another Field Value 3\"\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-933083d5-5533-4e8b-86b9-133145fe3893/threads",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-933083d5-5533-4e8b-86b9-133145fe3893",
+								"threads"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modify Thread",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"weave-field-69a36e92-de43-4021-bec6-06b14706c6f3\" : \"Updated Field Value 1\",\n\t\"weave-field-c3559f44-a21a-4dc7-a407-781cec8a4012\" : \"Another Field Value 2!\"\n}"
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-d248b14d-915d-4215-a4be-274c260e0094/threads/my-thread-3",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-d248b14d-915d-4215-a4be-274c260e0094",
+								"threads",
+								"my-thread-3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Thread",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{knit.security.access-token}}"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/sourcefit/v1/weave/api/weaves/weave-d248b14d-915d-4215-a4be-274c260e0094/threads/my-thread-3",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"sourcefit",
+								"v1",
+								"weave",
+								"api",
+								"weaves",
+								"weave-d248b14d-915d-4215-a4be-274c260e0094",
+								"threads",
+								"my-thread-3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Get All Events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{knit.security.access-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://{{knit.weave.url}}/v1/weave/api/events/weave",
+							"protocol": "http",
+							"host": [
+								"{{knit.weave.url}}"
+							],
+							"path": [
+								"v1",
+								"weave",
+								"api",
+								"events",
+								"weave"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

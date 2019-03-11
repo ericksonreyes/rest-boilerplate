@@ -1,0 +1,18 @@
+services:
+  identity_generator:
+    class: App\Repositories\Command\RamseyUuidGenerator
+
+  rabbitmq_event_publisher:
+    class: App\Publishers\RabbitMQEventPublisher
+    arguments: ['@rabbitmq_connection', '%rabbitmq_exchange_name']
+
+imports:
+  - { resource: rabbitmq.yml }
+  - { resource: event_projectors.yml }
+  - { resource: application_services/leads_services.yml }
+  - { resource: application_services/email_transport.yml }
+  - { resource: domain_repositories/event_store.yml }
+  - { resource: domain_repositories/lead_repository.yml }
+  - { resource: domain_repositories/user_repository.yml }
+  - { resource: query_repositories/leads.yml }
+  - { resource: query_repositories/accounts.yml }

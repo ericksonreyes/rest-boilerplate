@@ -1,0 +1,4 @@
+services:
+  lead_repository:
+    class: App\Repositories\Command\EventSourcedLeadRepository
+    arguments: ['@event_store']

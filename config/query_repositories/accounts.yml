@@ -1,0 +1,6 @@
+services:
+  accounts_model:
+    class: App\Models\Query\EloquentAccounts
+
+  accounts_repository:
+    class: App\Models\Query\EloquentAccounts

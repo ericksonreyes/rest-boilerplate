@@ -1,0 +1,5 @@
+services:
+  lead_email_availability_service:
+    class: App\Models\Query\EloquentClosedWonLeads
+  account_id_availability_service:
+    class: App\Models\Query\EloquentAccounts

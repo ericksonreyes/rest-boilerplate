@@ -1,0 +1,31 @@
+<?php
+
+namespace App\Projectors;
+
+/**
+ * Class Projectors
+ * @package App\Projectors
+ */
+class Projectors
+{
+    /**
+     * @var Projector[]
+     */
+    private $projectors = [];
+
+    /**
+     * @param Projector $projector
+     */
+    public function addProjector(Projector $projector)
+    {
+        $this->projectors[] = $projector;
+    }
+
+    /**
+     * @return Projector[]
+     */
+    public function projectors():array
+    {
+        return $this->projectors;
+    }
+}

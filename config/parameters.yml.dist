@@ -1,0 +1,26 @@
+parameters:
+    application_host: http://sales-api.knit.local
+    issuer_name:
+    jwt_algorithm: HS256
+    jwt_secret_key: KNITSOURCEFIT
+    jwt_encryption_key_file:
+    jwt_decryption_key_file:
+    rabbitmq_host: 127.0.0.1
+    rabbitmq_port: 5672
+    rabbitmq_username: admin
+    rabbitmq_password: admin
+    rabbitmq_vhost: /
+    rabbitmq_exchange_name: events
+    elasticsearch_event_store_hosts: ['localhost:9200']
+    smtp_host: localhost
+    smtp_port: 25
+    smtp_encryption: null
+    smtp_username:
+    smtp_password:
+    knit_web_url: http://knit.local
+    knit_mail_sender_name: An Awesome RestWare Developer
+    knit_mail_bcc_recipients:
+        - erickson.reyes@sourcefit.com
+        - timikko.santos@sourcefit.com
+        - paulo.basilio@sourcefit.com
+        - ronaldo.bernal@sourcefit.com

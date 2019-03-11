@@ -1,0 +1,26 @@
+parameters:
+    application_host: http://staging-sales-api.idealforliving.com
+    issuer_name:
+    jwt_algorithm: HS256
+    jwt_secret_key: SOURCEFIT
+    jwt_encryption_key_file:
+    jwt_decryption_key_file:
+    rabbitmq_host: staging-rabbitmq.idealforliving.com
+    rabbitmq_port: 5672
+    rabbitmq_username: xpxzyqtf
+    rabbitmq_password: NFzyjGeF2ck0_sSTJHItQKcDSGIMnSoy
+    rabbitmq_vhost: xpxzyqtf
+    rabbitmq_exchange_name: events
+    elasticsearch_event_store_hosts: ['staging-elasticsearch.idealforliving.com:80']
+    smtp_host: smtp.gmail.com
+    smtp_port: 465
+    smtp_encryption: ssl
+    smtp_username: knitdevs@gmail.com
+    smtp_password: $0uRcf1tG00gleMa1L
+    knit_web_url: http://18.136.19.213
+    knit_mail_sender_name: Awesome RestWare Development Team
+    knit_mail_bcc_recipients:
+        - erickson.reyes@sourcefit.com
+        - timikko.santos@sourcefit.com
+        - paulo.basilio@sourcefit.com
+        - ronaldo.bernal@sourcefit.com

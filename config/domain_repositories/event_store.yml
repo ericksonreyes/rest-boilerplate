@@ -1,0 +1,30 @@
+services:
+
+  event_factory:
+    factory: ['App\Repositories\Command\EventFactory', 'loadAllFrom']
+    arguments: ['src/Rest/Sales/Domain/Model/Account/Event/']
+    calls:
+    - [loadMoreFrom, ['src/Rest/Sales/Domain/Model/Lead/Event/']]
+    - [loadMoreFrom, ['src/Rest/Sales/Domain/Model/User/Event/']]
+
+  event_model:
+    class: App\Models\Command\EventModel
+
+  mysql_event_storage:
+    class: App\Repositories\Command\EloquentEventStorage
+    arguments: ['@event_model', '@event_factory', '@identity_generator']
+
+  elasticsearch_client:
+    factory: ['App\Repositories\Command\ElasticSearchClientBuilder', 'build']
+    arguments: ['%elasticsearch_event_store_hosts%']
+
+  elasticsearch_event_storage:
+    class: App\Repositories\Command\ElasticSearchEventStorage
+    arguments: ['@elasticsearch_client', '@event_factory']
+
+  event_store:
+    class: App\Repositories\Command\EventStoreRepository
+    arguments: ['@mysql_event_storage']
+    calls:
+    - [addPublisher, ['@rabbitmq_event_publisher']]
+    - [addRepository, ['@elasticsearch_event_storage']]
